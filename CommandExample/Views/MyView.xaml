@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="CommandExample.Views.MyView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+      <TextBlock Text="Enter text" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,13" />
+      <TextBox Text="{Binding Message, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Margin="10,10,10,0" />
+      <TextBlock Text="{Binding Message}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,43" />
+      <Button Content="Save" Command="{Binding SaveCommand}" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,10,10" />
+        <Button Content="Load" Command="{Binding LoadCommand}" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,50,10" />
+    </Grid>
+</UserControl>
